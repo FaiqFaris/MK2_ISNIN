@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kedai Tudung - Pesanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1, p {
+            margin: 20px 0;
+        }
+        .navbar {
+            display: table;
+            margin: 20px auto;
+        }
+        .navbar a {
+            display: table-cell;
+            padding: 15px 30px;
+            margin: 10px;
+            border: 2px solid #000;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            width: 150px;
+        }
+        table {
+            width: 80%;
+            height: 400px;
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+        td {
+            vertical-align: top;
+            text-align: center;
+        }
+        form {
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        label, input, select, textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>KEDAI TUDUNG</h1>
+
+    <div class="navbar">
+        <a href="index.html">Utama</a>
+        <a href="products.html">Produk</a>
+        <a href="orders.html">Pesanan</a>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <section>
+                    <h2>Order Form</h2>
+                    <form action="submit_order.php" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="4" required></textarea>
+
+                        <label for="product">Product:</label>
+                        <select id="product" name="product" required>
+                            <option value="product1">Product 1</option>
+                            <option value="product2">Product 2</option>
+                            <option value="product3">Product 3</option>
+                        </select>
+
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+
+                        <input type="submit" value="Submit Order">
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Order in Cart</h2>
+                    <img src="cart.jpg" alt="Cart Image">
+                    <p>YOUR CART IS EMPTY</p>
+                </section>
+            </td>
+        </tr>
+    </table>
+
+    <p>CONTACT US</p>
+    <p>Phone Number: 013-455 4489 | Address: No 8, Pauh Putra, Arau</p>
+</body>
+</html>
